@@ -1,4 +1,4 @@
-/* kopernik_soil - a soil probe on a Wemos D1 Mini or ESP32-C3 SuperMini that posts to a local hub
+/* kopernik-soil - a soil probe on a Wemos D1 Mini or ESP32-C3 SuperMini that posts to a local hub
  *
  * The Frugal-IoT version of Kopernik's standalone probe sketch: the same pins, the same dry/wet
  * calibration, the same hub and the same form POST, so the hub needs no change. What the library
@@ -9,7 +9,7 @@
  *
  * Arduino IDE: Tools > Board is "LOLIN(WEMOS) D1 R2 & mini" or "Nologo ESP32C3 Super Mini" (also
  * for the SuperMini Pro). Keep every file in this folder together: platform.h holds the settings
- * the library itself needs, kopernik_soil.ino.globals.h is how an ESP8266 build finds them, and
+ * the library itself needs, kopernik-soil.ino.globals.h is how an ESP8266 build finds them, and
  * partitions.csv makes the SuperMini build fit in flash. On the SuperMini also set Tools > Partition Scheme to
  * "No OTA (2MB APP/2MB SPIFFS)" - over-the-air updates still work, partitions.csv sets the real
  * layout and the menu only raises the size limit the IDE checks against.

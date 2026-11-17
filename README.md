@@ -1,9 +1,9 @@
-# kopernik_soil
+# kopernik-soil
 
 A capacitive soil probe on a Wemos D1 mini or an ESP32-C3 SuperMini. Every cycle it posts the
 moisture reading to the SoilHub at `http://192.168.4.1/ingest`, as the original sketch did. With
 internet it also reports to the Frugal-IoT dashboard. Settings are in the configuration block at
-the top of `kopernik_soil.ino`.
+the top of `kopernik-soil.ino`.
 
 ## Wiring
 
@@ -32,7 +32,7 @@ battery voltage so that pin 4 can read it. No D0 to RST wire is needed.
 **Arduino IDE.** Install **Frugal-IoT** 2.0.13 or later with Tools > Manage Libraries, and
 choose **Install All** when it asks about dependencies. The D1 mini also needs the **esp8266**
 boards package, and the SuperMini the **esp32** one. Keep every file in this folder together:
-`platform.h` holds settings the library itself reads, `kopernik_soil.ino.globals.h` is how an
+`platform.h` holds settings the library itself reads, `kopernik-soil.ino.globals.h` is how an
 ESP8266 build finds them, and `partitions.csv` makes the SuperMini build fit.
 Despite its name, the SuperMini's partition setting keeps over-the-air updates working, because
 `partitions.csv` sets the real layout.
@@ -40,7 +40,7 @@ Despite its name, the SuperMini's partition setting keeps over-the-air updates w
 **Enrolment secret.** The secret lets the node join the dashboard by itself. Get it from the
 dashboard's gear icon > Nodes > Enrolment secret. 
 
-In the Arduino IDE, paste it between the quotes on the `SYSTEM_MQTT_ENROL_SECRET` line of `kopernik_soil.ino`. 
+In the Arduino IDE, paste it between the quotes on the `SYSTEM_MQTT_ENROL_SECRET` line of `kopernik-soil.ino`. 
 
 In PlatformIO, create `platformio-secrets-local.ini` beside `platformio.ini` containing:
 ```

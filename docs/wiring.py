@@ -12,7 +12,7 @@ CHECK = "Check soil sensor connections, it varies from brand to brand"
 # ---- D1 Mini: probe to the right. D1 sits above G on the board but VCC sits below GND on the
 # probe, so those two cross once. A0 is on the far side and its pin is the bottom one, so it goes
 # under the board.
-d = Diagram(1240, 780, "kopernik_soil on a Wemos D1 mini",
+d = Diagram(1240, 780, "kopernik-soil on a Wemos D1 mini",
             "Battery not shown - it is not read on this board yet, see the README")
 b = d.board("wemos_d1_mini", x=150, y=140, width=360)
 p = d.soil_probe(x=680, y=330, facing="left")
@@ -29,7 +29,7 @@ print(d.save(os.path.join(HERE, "wiring_d1_mini")))
 # the far side and VCC is the middle pin, so it comes under the board and crosses AOUT once.
 # The LiPo sits above, leads down: + from 5V, - from the ground wire. The divider's tap is on 4;
 # its 100k to + crosses the ground wire, which nothing can avoid with + and - both above it.
-d = Diagram(1460, 930, "kopernik_soil on an ESP32-C3 SuperMini",
+d = Diagram(1460, 930, "kopernik-soil on an ESP32-C3 SuperMini",
             "GPIO numbers are printed on the back of the board - shown here beside each pin")
 b = d.board("esp32c3_supermini", x=150, y=270, width=380, pin_labels=True)
 xr, gy, vy, fy = b["5V"][0], b["G"][1], b["5V"][1], b["4"][1]

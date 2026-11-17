@@ -1,4 +1,4 @@
-/* Settings the whole build needs, not just the sketch, so they cannot go in kopernik_soil.ino -
+/* Settings the whole build needs, not just the sketch, so they cannot go in kopernik-soil.ino -
  * the library's own files read them too. Arduino IDE only: PlatformIO ignores this file and uses
  * the same settings from platformio.ini.
  */
